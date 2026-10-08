@@ -1,6 +1,26 @@
 import * as readline from 'node:readline/promises';
 import{stdin as input, stdout as output} from 'node:process';
 const userInput = readline.createInterface({input, output});
+
+/*
+M1: Getallen optellen
+Maak een applicatie dat getallen aan de gebruiker vraagt
+ en deze optelt bij elkaar zolang het ingegeven getal groter is dan 0. 
+Van zodra de gebruiker een getal kleiner of gelijk aan 0 ingeeft 
+print de applicatie de som af.
+*/
+
+let getal = 0;
+let som = 0; 
+
+do{
+    som += getal;
+    getal = parseFloat(await userInput.question('geef een getal'));
+}while(getal > 0);
+console.log(som);
+
+
+
 /*M2
 Gebruik een variabele hoogte. 
 We gaan aan de hand van hoogte een sterrenpiramide bouwen. 
@@ -29,6 +49,45 @@ for(let rij = 1; rij <= hoogte; rij++){
 }
 
 
+/*M3: Priemgetal
+Vraag een getal aan de gebruiker.
+ Controleer of dit getal een priemgetal is of niet. 
+ (Een getal is een priemgetal wanneer het enkel deelbaar is door 1 of door zichzelf) 
+ */
+//*
+ let isHetEenPriemGetal = parseFloat( await userInput.question('Kies een getal'))
+ let deler = 2;
+ let aantalDelers = 0;
+
+ while(deler < isHetEenPriemGetal){
+    if(isHetEenPriemGetal % deler == 0){
+        aantalDelers++;
+    }
+    deler++
+ }
+
+ if(aantalDelers > 0 ){
+    console.log("geen priemgetal");
+ }else{
+    console.log('Het is wel een priemgetal, proficiat');
+ }
+//*/
+
+/*
+ let isHetEenPriemGetal = parseFloat( await userInput.question('Kies een getal'))
+ let deler = 2;
+
+ while(deler < isHetEenPriemGetal){
+    if(isHetEenPriemGetal % deler == 0){
+        console.log('geen priemgetal');
+        break;
+    }
+    deler++
+ }
+//*/
+
+
+
 
 /*M4: FizzBuzz
 Maak een applicatie dat alle getallen tussen 1 en 100 print. 
@@ -46,7 +105,7 @@ for(let i = 1; i <= 100; i++){
 */
 
 
-
+/*
 let getal = 1;
 while(getal <= 100){
 
@@ -65,6 +124,6 @@ while(getal <= 100){
     
     getal++;
 }
-
+//*/
 
 process.exit()
