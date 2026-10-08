@@ -48,6 +48,12 @@ for(let rij = 1; rij <= hoogte; rij++){
     console.log(lijnSterren) ;
 }
 
+//of korter
+lijnSterren = '';
+for(let rij = 1; rij <= hoogte; rij++){
+    lijnSterren += '*' 
+    console.log(lijnSterren) ;
+}
 
 /*M3: Priemgetal
 Vraag een getal aan de gebruiker.
