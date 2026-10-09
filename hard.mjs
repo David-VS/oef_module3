@@ -37,7 +37,7 @@ for (let i = 1; i <= hoogte; i++) {
     }
 
     //tel vervolgens het aantal spaties tot aan het midden, 
-    // het midden van 5 voor de bovenste rij is 3, je tekent dus twee spaties en op positie drie een ster
+    //het midden van bv hoogte 5 voor de bovenste rij is 3, je tekent dus twee spaties en op positie drie een ster
     //de rij eronder teken je een spatie, voor positie 2, 3 en 4 een ster
     //... 
     let spaties = 0;
@@ -84,7 +84,5 @@ do{
     rollingAverage = sum / aantalInvoeren;
     console.log(rollingAverage);
 }while(rollingAverage <= 25);
-
-
 
 process.exit()
